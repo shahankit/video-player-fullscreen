@@ -58,15 +58,15 @@ export default class FeedItem extends Component {
         style={this.props.style}
       >
         {(() => {
-          if (this.state.playing === null) {
-            return (
-              <Image
-                style={styles.video}
-                source={require('./assets/thumbnail.png')}
-                resizeMode={'cover'}
-              />
-            );
-          } else {
+          // if (this.state.playing === null) {
+          //   return (
+          //     <Image
+          //       style={styles.video}
+          //       source={require('./assets/thumbnail.png')}
+          //       resizeMode={'cover'}
+          //     />
+          //   );
+          // } else {
             return (
               <Video
                 source={{uri: 'http://clips.vorwaerts-gmbh.de/VfE_html5.mp4'}} // Can be a URL or a local file.
@@ -86,7 +86,7 @@ export default class FeedItem extends Component {
                 style={styles.video}
               />
             );
-          }
+          // }
         })()}
         <TouchableOpacity
           onPress={this.playButtonPressed.bind(this)}
