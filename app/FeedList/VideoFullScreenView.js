@@ -78,7 +78,7 @@ export default class VideoFullScreenView extends Component {
       <View>
         <TouchableHighlight
           underlayColor={this.props.underlayColor}
-          onPress={this.open.bind(this)}
+          onPress={this.props.open}
         >
           {this.props.children}
         </TouchableHighlight>
@@ -86,4 +86,3 @@ export default class VideoFullScreenView extends Component {
     );
   }
 }
-
